@@ -30,7 +30,8 @@ export class MoviesPage implements OnInit {
     this.movieService.getTopRatedMovies(this.currentPage).subscribe((res) => {
       loading.dismiss();
       this.movies = [...this.movies, ...res.results];
-      console.log(res.results[0].title);
+
+      console.log(res);
       event?.target.complete();
     });
   }
